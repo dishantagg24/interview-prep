@@ -1,11 +1,14 @@
 What is javascript?
-JavaScript is a client-side and server-side scripting language inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language.
+JavaScript is a client-side and server-side scripting language inserted into HTML pages and is understood by web browsers. It is an Object based Programming language. It is created by netscape browser and every other browser started using javascript.
 
-Q. Why script tag is wriiten at bottom not at starting of body tag or inside head tag like css?
+Q. Why script tag is written at bottom not at starting of body tag or inside head tag like css?
 If script tag is wriiten at starting of body tag or inside head tag then javascript will load before html files and the user don't see anything on the page until the javascript loads and it seems slower website. Therefore to appear the website loads faster we will write script tag at last. 
 
 Q. What are lambda or arrow functions?
 Arrow functions are just short syntax for a function expression and does not have its own this, arguments, super or new.target. These functions are best suited for non method functions. 
+
+Use of arrow functions
+with arrow functions there is no binding of this . In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever. With arrow functions, the this keyword always represents the object that defined the arrow function.
 
 Q. What are call, apply and bind methods?
 Call method invokes the function with a given 'this' value and arguments provided one by one seperated by commas.
@@ -39,9 +42,64 @@ Objects are collections of things that have properties that have values.
 Methods:
 Methods are pretty much just properties that point to functions.We use them like functions but we call them with the dot notation like it's a property on the object.
 
-Q. Difference between parameters and arguments
 Objects are collection of properties
 Function inside an object is called method for eg:- console.log() means log is a method on console.
 
+Q. Difference between parameters and arguments
+When a function is called, the values that are passed during the call are called as arguments. The values which are defined at the time of the function prototype or definition of the function are called as parameters.
+
 Q. What are non-method functions?
 Q. What is new.target?
+
+const first = () => {
+    console.log(name);
+  const second = () => {
+      const name="bobby";
+  };
+  return second;
+};
+
+const newFunc = first();
+newFunc();
+
+What is diff b/w == and === in javascript?
+So there's two types of equivalence in JavaScript.There's the double equals and then there's the triple equals. Double equals just checks if the values of the two things are the same and what it will also do is it will try and coerce the types on the left and the right side that we're comparing.So let's say for example the string of one and the number of one they'll try and coerce the value of the string over to a number and then they'll compare the values.So once the string of 1 becomes 1 while the values of one are the same. Whereas if we try and do a triple equals we'll find that it gives us false because with the triple equals that's a strict evaluation which is looking at both the type of what we're comparing and also the value.So because the type of our string of one is a string and then our type of our number is a number then we'll get false when we try and do it this way now inside of JavaScript.
+
+What is a Temporal Dead Zone?
+It is a time since let variable was hoisted and till it is initialised some value.
+
+Error in javascript:-
+1. SyntaxError
+2. TypeError
+3. ReferenceError
+
+Block:- Block is defined by curly braces. It is also known as compound statement. It is used to combine multiple js statements into group
+
+Closure:- A closure is a function bind together with its lexical environment.
+
+Garbage Collector:- Garbage Collector is a program in the browser or the js engine which frees up the unutilised memory
+
+First-Class Functions:- The ability to use function as values and can be passed as an argument to another function and can be returned from functions. This ability of functions are known as first class functions
+
+AddeventListener is another superpower given by browser to js engine through the window object in form of web API called DOM Api
+
+Js is a synchronous and single threaded language i.e. it does one task at a time and in sequential manner or in a specific order.
+
+Js engine used in various browsers eg:-
+Microsoft Edge, Internet Explorer - Chakra
+Mozilla Firefox - SpiderMonkey (first js engine)
+Google Chrome, Node.js - V8 (written in a c++ language)
+
+Js runtime environment :- Js Engine + Web APIs + Callback Queue + Microtask Queue + Event Loop  
+
+Interpretter :- It takes our code and starts executing the code line by line in the order it does not know what happen in next line.
+
+Compiler:- Our whole code compile first of all even before executing and a new code is formed which is the optimised version of this code and then it is executed. 
+
+In interpretter, code is fastly executed but in case of compiler we have more efficiency.
+
+Js can behave like an interpretter language as well as compiled language, everything is dependent on the  js engine.
+
+JIT (just in time) Compilation :- Interpretter + compiler
+
+ 

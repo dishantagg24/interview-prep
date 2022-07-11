@@ -1,0 +1,31 @@
+What is Babel & webpack?
+Babel is a tool that compiles all of your Javascript into an older version (ES5) that all browsers support.
+Webpack:-It is a module bundler it's letting us write a modular code.It takes all our javascript files and create well bundle everything up together and optimize it for production.
+
+What is firebase?
+Firebase is generally a solution or a platform that handled a lot of the stuff that a backend developer would normally do including efficiently querying database, efficiently storing our stuff and it gives us a very easy way to do o authentication which normally to do from scratch is extremely difficult.
+
+Q. Difference between authentication and authorization?
+authentication is the process of verifying who someone is, whereas authorization is the process of verifying what specific applications, files, and data a user has access to.
+
+Reselect allows us to write selectors in such a way so that it knows that if the properties that it's pulling from the state and using are the same in the sense that their value hasn't changed and the output of the selector is not different then it won't actually pass them into our component it'll just pass the old value and our react component will know not to re render.There's also other benefits in the sense that it allows us to actually separate our selectors and make them reusable.
+
+Thunk is a new library that allows us to handle asynchronous event handling and firing multiple actions.
+All Thunks is a action creator that returns a function that gets the dispatch, very similar to the map dispatch to props.
+
+What is a Portal?
+A portal allows us to render some element not as a direct child.We can instead render that element or that component as a child of some other element inside our HTML structure, most commonly the body.
+
+Why we use Portal? 
+We use Portal to overcome rules of stacking contexts or trying to show a modal or any CSS related issues.
+
+Q. What is the main difference between localStorage and sessionStorage?
+LocalStorage is the same as SessionStorage but it persists the data even when the browser is closed and reopened(i.e it has no expiration time) whereas in sessionStorage data gets cleared when the page session ends.
+
+What are Frameworks?
+Angular is a framework.
+
+What are Libraries?
+
+What is the difference b/w frameworks and libraries?
+When an user use a framework, the framework is in charge of the flow. Framework is calling the code whereas When user uses a library, user is in charge of the application. User is calling the code

@@ -1,0 +1,111 @@
+*****px is a absolute unit i.e. it does not change with width of screen whereas rem changes when width of screen changes 
+font-size=3rem
+
+*****for responsive behaviour mark all units of elements as rem and in media queries write font-size for html in px by default it is 16px
+if a div element has font-size: 3rem then it will convert to 3*(font-size of html)px
+
+@media (max-width:1200px){
+	html:{
+	font-size:20px
+   }
+}
+
+@media (max-width:768px){
+	html:{
+	font-size:18px
+   }
+}
+
+@media (max-width:450px){
+	html:{
+	font-size:14px
+   }
+}
+
+*****Don't use em units.
+
+*****vw is just the % of width of screen.
+let's assume our screen width is 1000px and we declare a div with 10vw that means div has width of 10% of 1000 i.e. 100px
+vh is also similar as vw but used for height
+50vh=50%
+50vw=50%
+
+*****The max-width property defines the maximum width of an element.
+If the content is larger than the maximum width, it will automatically change the height of the element.
+If the content is smaller than the maximum width, the max-width property has no effect.
+
+max-width ka mtlb hain agar content max width se jyada ho gaya toh uss element ki width increase nahi hogi height increase hogi
+
+*****The min-width property defines the minimum width of an element.
+If the content is smaller than the minimum width, the minimum width will be applied.
+If the content is larger than the minimum width, the min-width property has no effect.
+
+min-width ka mtlb hian agar content min width se kam hain like min width humne 500px define ki hain lekin content 150px mein aa raha hain tab bhi element 500px ki width lega na ki 150px ki
+
+*****Basics of Sass file
+1. we can declare variable with $ sign like $primaryBtn: rgb(182,45,24);
+2. div>h1 we can write this in sass like 
+	div{
+ 		background-color:black;
+ 		h1{
+  		  font-size:3rem
+ 		}
+ 		p{
+ 		  //
+		}
+       	 }
+
+3. if we want hover,after,before,focus,etc property on button then we can write as 
+	button{
+	//
+	&:hover{
+	background:red
+	}
+	&::after{
+	//
+	}
+       }
+
+4. we can also seperate our files one file and import it in another file (we have to declare it with underscore)
+eg:- we have seperated _header.scss from styles.scss and for use it in styles.scss we have to write like this --> @import './header'
+
+5. we have mixin in scss. It's just like functions we use in programming languages that is it contains some content that can be used in many places by just writing the name of mixin
+eg:-
+
+@mixin flexCenter {
+	display:flex,
+	justify-content:center,
+	align-items:center
+}
+
+header{
+   @include flexCenter();
+}
+
+6. we can also pass paramters like
+@mixin flexCenter($direction,$background) {
+	display:flex,
+	justify-content:center,
+	align-items:center,
+	flex-direction: $direction,
+	background:$background
+}
+
+header{
+   @include flexCenter(column,red);
+}
+
+nav{
+   @include flexCenter(row,blue);
+}
+
+7. we can also include the properties of another element inside the current element like the element with class name contact have all the properties of header as well
+.contact{
+	@extend header;
+	flex-direction:row; 
+}
+
+8. we can also do arithmetic operation like + - / *
+.main{
+	width: 100%-46%;
+}

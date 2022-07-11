@@ -1,0 +1,47 @@
+What is Redux?
+Redux is a library that makes state management easier not only for react but for any tools.It actually got inspiration from database design from things such as events sourcing or CQRS.
+
+CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read and update operations for a data store.
+
+redux:- to store state.It allows react state to be more scalable.
+react router:- to move b/w pages
+stripe:- to make online purchases
+redux saga:- a scalable way for us to handle asynchronous actions in app
+
+The provider is this component class that we get from react-redux that once passed the store object. We'll be able to give that redux store context to the rest of the application so we can dispatch actions to that store or we can actually pull values off of the store and add into our components.
+
+Connect is a higher order component that lets us modify our component to have access to things related to redux like mapStateToProps and mapDispatchToProps.
+
+MapStateToProps= mapStateToProps() is a utility which helps our component get updated state (which is updated by some other components).
+
+Now this mapstatestoprops and the connect use anywhere we need properties from our reducers.
+
+MapDispatchToProps :- mapDispatchToProps() is a utility which will help our component to fire an action event (dispatching action which may cause change of application state)
+
+Utility functions allow us to keep our files clean and organize functions that we may need in multiple files in one location.
+
+Redux Cycle :-
+Action Center --> Action --> Dispatch --> Reducer --> State
+
+Action Creator :- Action creator is a function that is going to create or return a plain javascript object, we refer to this plain javascript object as an action. 
+
+Action :- An action has a type property and a payload property, that type property in action describes some change that we want to make inside of our data. And the payload property describes some contexts about the change that we want to make.
+The purpose of an action is to describe some change that we want to make to the data inside of our application.
+
+Dispatch :- The dispatch function is going to take in action. It's going to make copies of that object and then pass it off to a bunch of different places inside of our application.
+
+Reducer :- A reducer is a function that is responsible for taking in an action and some existing amount of data, its going to process that action and then make some change to the data and then return it so that it can be centralized in some other location.
+Reducers going to take an action, look at the action, look at its type and then based on that type decide how to update its data. 
+
+State :- In redux the state property is a central repository of all information that has been created by our reducers. All the information gets consolidated inside the state object so that our react application can very easily reach in to our the redux side of the app and get access to all of the data of our application.
+
+And in that way our react app doesn't have to go around to each separate reducer for the the current state.
+
+Any time we want to change the state or the data of our application we're going to call an action creator. Calling an action creator is going to produce an action object. This action object describes exactly how we want to change data inside of application. That action object gets fed to the dispatch function which in turn is going to make copies. We can imagine of the action object and feed those copies to each of our different reducers. In turn the reducers are going to run.They're going to process those actions that came in, modify their data and then eventually return some new data. That data that gets returned gets formed into some new state object.So then we wait until we need to somehow updates our state again at some point in the future.
+
+What is Middleware?
+A middleware is a plain javascript function that is going to be called with every single action that we dispatch. 
+Inside of that function a middleware has the opportunity to stop an action from being dispatch, so prevent it from going to any of our reducers. Middleware can modify an action or it can otherwise just kind of mess around in with an action.For example a middleware simply console log every action that we dispatch.So any time we dispatch an action we might have a middleware that is going to simply console log it.
+There are a tremendous number of open source middleware that we can install as dependencies into our project.
+We can very easily write our own custom middleware and use them inside of our own redux store.
+One of the most popular uses of middleware is for dealing with asynchronous action creators.

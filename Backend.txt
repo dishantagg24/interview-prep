@@ -3,6 +3,7 @@ NPM is a package manager.It's essentially a way for us to automate the process o
 
 What is node.js?
 It is an open source JavaScript run time that allows developers to write and run JavaScript application on the server.Developers started using node.js to also write tools (like task automation, to compile Sass) to help them with local web development.
+It is an environment to run javascript outside browser.It was created in 2009 on top of Chrome's v8 js engine.
 
 What is JSON?
 JSON stands for JavaScript Object Notation.JSON is a lightweight format for storing and transporting data.JSON is often used when data is sent from a server to a web page.JSON is "self-describing" and easy to understand.
@@ -16,4 +17,4 @@ Endpoint :- every API that interacts with a external system, like a server, will
 Parameters :- In order to allow the API to be flexible enough to deal with custom queries, usually APIs allow us to provide parameters. And parameters go at the end of the URL, after a question mark.And then there's a key value pair that goes into the URL.The key is called ‘contains’ and then after an equal sign is the query.The first query follows a question mark, and every subsequent query follows an ampersand, or an and symbol.
 
 What is REST?
-Rest is short for Representational State Transfer. It's an architectural style for designing APISs.
+Rest is short for Representational State Transfer. It's an architectural style for designing APIs.

@@ -23,7 +23,7 @@ Summary
 We can make a global variable in function by using 'this' keyword. For eg:- function dog(){ this.muddy="Aryan" } 
 console.log(muddy); ---> "Aryan"
 
-The second rule for determining the value of the key word 'this' the implicit rule. The implicit rule states that when the keyword 'this' is inside of a declared
+The second rule for determining the value of the keyword 'this' the implicit rule. The implicit rule states that when the keyword 'this' is inside of a declared
 object its value will always be the closest parent object.
 
 For eg:-
@@ -41,7 +41,7 @@ One thing to remember is that they can only be used on functions. Call, Apply an
 
 For clear understanding watch video in colt steele course.
 
-The fourth rule for determining the value of the keyword 'this' is when you see the new keyword.When the new keyword is used a new object is created out of thin air. The new keyword is used with a function and inside of the function definition the keyword 'this' refers to the new object that is created.Finally when the new keyword is used, an implicit return 'this' is added to the function which uses it.
+The fourth rule for determining the value of the keyword 'this' is when you see the new keyword. When the new keyword is used a new object is created. The new keyword is used with a function and inside of the function definition the keyword 'this' refers to the new object that is created.Finally when the new keyword is used, an implicit return 'this' is added to the function which uses it.
 
 for eg:- function person(firstname,lastname){
 		this.firstname= firstname			//Here value of this is window (global object)

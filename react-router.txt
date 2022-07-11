@@ -1,0 +1,13 @@
+react router dom provides us three arguments/properties on any component that gets rendered by route.
+The three props are :-
+history prop :- push(function)
+location prop :- pathname(string) :- gives full path name
+match prop :- isExact(boolean), params(object), path(string), url(string)
+
+use of history->push
+<button onClick={()=>props.history.push('/topics')}> Topics </button>
+
+This is equivalent to using a link but it gives us more dynamic access. We can dynamically functionally control when we want this to work. We couldn't render a link in our componentDidMount because it's just a functional call, therefore we use history.push prop
+
+router is low level interface we don't use it anywhere
+we use BrowserRouter from react-router-dom library and routes, route from react-router library

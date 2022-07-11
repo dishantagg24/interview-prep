@@ -1,0 +1,25 @@
+/** @format */
+
+import React, { useContext, useEffect, useState } from 'react';
+
+const AppContext = React.createContext();
+
+const AppProvider = ({ children }) => {
+  const [flags, setFlags] = useState([]);
+
+  const fetchData = async () => {};
+
+  useEffect(() => {
+    fetchData();
+  }, [flags]);
+
+  return (
+    <AppContext.Provider value={{ flags }}>{children}</AppContext.Provider>
+  );
+};
+
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+};
+
+export { AppContext, AppProvider };
